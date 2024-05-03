@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const tweetSchema = mongoose.Schema({
   message: String,
   date: Date,
-  nbLike:Number,
+  nbLike: [{type: mongoose.Schema.Types.ObjectId, ref: 'users'} ],
   user:{ type: mongoose.Schema.Types.ObjectId, ref: 'users' }
 });
 
