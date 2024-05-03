@@ -23,7 +23,7 @@ router.post('/newTweet', (req, res) => {
 });
 
 router.post('/removeTweet', (req, res) => {
-    Tweet.deleteOne({ _id: req.body.tweetId })
+    Tweet.deleteOne({ date: req.body.date })
         .then(res.json({ result: true }))
 })
 
